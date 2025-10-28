@@ -1,0 +1,13 @@
+ERROR - 2024-02-07 20:26:33 --> Error connecting to the database: Too many connections
+CRITICAL - 2024-02-07 20:26:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

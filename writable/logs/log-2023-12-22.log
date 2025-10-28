@@ -1,0 +1,265 @@
+CRITICAL - 2023-12-22 03:28:39 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:37:14 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:41:45 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:42:18 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:44:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:46:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:46:25 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 03:50:42 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 08:29:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 16:12:47 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:42:40 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:42:48 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:42:56 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:43:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:43:11 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:43:28 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:43:52 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:44:21 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:44:37 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 18:44:49 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 19:48:13 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:48:39 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:48:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:48:52 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:48:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:48:55 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:48:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:49:01 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:49:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:49:03 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:49:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 19:49:34 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:49:45 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:49:45 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-22 19:49:48 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:49:52 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:49:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-22 19:49:54 --> Error connecting to the database: Too many connections
+CRITICAL - 2023-12-22 19:49:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Too many connections
+in SYSTEMPATH/Database/BaseConnection.php on line 415.
+ 1 SYSTEMPATH/Database/BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Users_model.php(613): CodeIgniter\Database\BaseConnection->query('SELECT * FROM seo_users ORDER BY id')
+ 3 APPPATH/Libraries/User_details.php(385): App\Models\Users_model->getUserDetails()
+ 4 APPPATH/Controllers/UiController.php(22): App\Libraries\User_details->getUserDetails()
+ 5 APPPATH/Controllers/Custom.php(13): App\Controllers\UiController->__construct()
+ 6 SYSTEMPATH/CodeIgniter.php(860): App\Controllers\Custom->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

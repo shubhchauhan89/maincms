@@ -1,0 +1,92 @@
+CRITICAL - 2023-11-17 00:01:20 --> Trying to access array offset on value of type null
+in APPPATH/Views/theme1/frontend/update_detail.php on line 20.
+ 1 APPPATH/Views/theme1/frontend/update_detail.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Views/theme1/frontend/update_detail.php', 20, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/theme1/frontend/update_detail.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('theme1/frontend/update_detail', [], true)
+ 5 APPPATH/Controllers/Update.php(146): view('theme1/frontend/update_detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Update->update_details()
+ 7 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Update))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 00:28:33 --> Trying to access array offset on value of type null
+in APPPATH/Views/theme1/frontend/update_detail.php on line 20.
+ 1 APPPATH/Views/theme1/frontend/update_detail.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Views/theme1/frontend/update_detail.php', 20, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/theme1/frontend/update_detail.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('theme1/frontend/update_detail', [], true)
+ 5 APPPATH/Controllers/Update.php(146): view('theme1/frontend/update_detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Update->update_details()
+ 7 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Update))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 00:42:36 --> Undefined offset: 1
+in APPPATH/Controllers/Update.php on line 90.
+ 1 APPPATH/Controllers/Update.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH/Controllers/Update.php', 90, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Update->update_details()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Update))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 03:03:32 --> Undefined offset: 1
+in APPPATH/Controllers/Services.php on line 92.
+ 1 APPPATH/Controllers/Services.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH/Controllers/Services.php', 92, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Services->services_details()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 16:27:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 16:39:07 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 17:47:53 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 18:04:43 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 18:34:24 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 18:41:22 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 18:41:41 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-17 18:41:57 --> Trying to access array offset on value of type null
+in APPPATH/Controllers/Custom.php on line 266.
+ 1 APPPATH/Controllers/Custom.php(266): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH/Controllers/Custom.php', 266, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Custom->custom_Main_Menu()
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Custom))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

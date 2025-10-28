@@ -1,0 +1,356 @@
+ERROR - 2024-03-16 06:25:57 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:25:57 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:27:34 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:27:34 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:28:01 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:28:01 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:28:18 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:28:18 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:28:35 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:28:35 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:31:22 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:31:22 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:33:03 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:33:03 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:37:52 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:37:52 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:37:57 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:37:57 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:38:14 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:38:14 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:38:25 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:38:25 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:39:10 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:39:10 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:39:28 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:39:28 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:40:13 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:40:13 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:43:51 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:43:51 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(61): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:47:43 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:47:43 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(61): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:48:02 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:48:02 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(61): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:49:32 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:49:32 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(61): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:50:03 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:50:03 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:50:25 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:50:25 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:50:32 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:50:32 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:50:35 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:50:35 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:50:36 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:50:36 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:52:13 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:52:13 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 06:52:32 --> curl_close() expects parameter 1 to be resource, null given
+in APPPATH/Controllers/PostController.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'curl_close() expects parameter 1 to be resource, null given', 'APPPATH/Controllers/PostController.php', 42, [...])
+ 2 APPPATH/Controllers/PostController.php(42): curl_close(null)
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 06:52:50 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 06:52:50 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(58): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:16:29 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:16:29 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:17:25 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:17:25 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:18:09 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:18:09 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:19:11 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:19:11 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:19:35 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:19:35 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:19:45 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:19:45 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:20:15 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:20:15 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('https://cmspartners.autoseoplugin.com/user/payment-status')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:21:11 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:21:11 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 07:26:11 --> syntax error, unexpected 'exit' (T_EXIT), expecting ';' or ','
+in APPPATH/Controllers/PostController.php on line 483.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/PostController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PostController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PostController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\PostController')
+ 5 SYSTEMPATH/CodeIgniter.php(848): class_exists('\\App\\Controllers\\PostController', true)
+ 6 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:30:34 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:30:34 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:30:47 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:30:47 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(57): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-16 07:31:59 --> Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8mb3_general_ci,COERCIBLE) for operation '='
+CRITICAL - 2024-03-16 07:31:59 --> Call to a member function getResult() on bool
+in SYSTEMPATH/Model.php on line 223.
+ 1 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH/Controllers/PostController.php(54): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 4 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 07:32:34 --> Use of undefined constant url - assumed 'url' (this will throw an Error in a future version of PHP)
+in APPPATH/Controllers/PostController.php on line 40.
+ 1 APPPATH/Controllers/PostController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant url - assumed \'url\' (this will throw an Error in a future version of PHP)', 'APPPATH/Controllers/PostController.php', 40, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-16 07:33:12 --> Use of undefined constant url - assumed 'url' (this will throw an Error in a future version of PHP)
+in APPPATH/Controllers/PostController.php on line 40.
+ 1 APPPATH/Controllers/PostController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant url - assumed \'url\' (this will throw an Error in a future version of PHP)', 'APPPATH/Controllers/PostController.php', 40, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\PostController->getMetaData('aHR0cHM6Ly93ZWJzaXRlc2VvdG9vbC5pbi8=')
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,69 @@
+ERROR - 2024-02-27 02:46:36 --> Unknown column 'image_blur' in 'field list'
+CRITICAL - 2024-02-27 02:46:36 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH/Model.php on line 182.
+ 1 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind(true, '5')
+ 2 APPPATH/Libraries/User_details.php(572): CodeIgniter\BaseModel->find('5')
+ 3 APPPATH/Controllers/Home.php(35): App\Libraries\User_details->getSlider('Home')
+ 4 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-27 02:46:42 --> Unknown column 'image_blur' in 'field list'
+CRITICAL - 2024-02-27 02:46:42 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH/Model.php on line 182.
+ 1 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind(true, '5')
+ 2 APPPATH/Libraries/User_details.php(572): CodeIgniter\BaseModel->find('5')
+ 3 APPPATH/Controllers/Home.php(35): App\Libraries\User_details->getSlider('Home')
+ 4 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-27 02:47:02 --> Unknown column 'image_blur' in 'field list'
+CRITICAL - 2024-02-27 02:47:02 --> Call to a member function getFirstRow() on bool
+in SYSTEMPATH/Model.php on line 182.
+ 1 SYSTEMPATH/BaseModel.php(523): CodeIgniter\Model->doFind(true, '5')
+ 2 APPPATH/Libraries/User_details.php(572): CodeIgniter\BaseModel->find('5')
+ 3 APPPATH/Controllers/Home.php(35): App\Libraries\User_details->getSlider('Home')
+ 4 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 04:08:47 --> There is no data to update.
+in SYSTEMPATH/BaseModel.php on line 846.
+ 1 SYSTEMPATH/BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH/Model.php(692): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH/Helpers/general_helper.php(2580): CodeIgniter\Model->update('13', [...])
+ 4 APPPATH/Controllers/ManageSection.php(1376): deleteItemsFromSection('54', 'post_id', Object(App\Models\PostSectionModel))
+ 5 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\ManageSection->delete_posts('54')
+ 6 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageSection))
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 04:17:47 --> Call to a member function select() on string
+in APPPATH/Helpers/general_helper.php on line 2560.
+ 1 APPPATH/Controllers/ManageSection.php(892): deleteItemsFromSection('13', 'products', 'ProductsSectionModel()')
+ 2 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\ManageSection->delete_products('13')
+ 3 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageSection))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 11:51:14 --> Invalid argument supplied for foreach()
+in APPPATH/Views/theme1/frontend/update_detail.php on line 149.
+ 1 APPPATH/Views/theme1/frontend/update_detail.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH/Views/theme1/frontend/update_detail.php', 149, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/theme1/frontend/update_detail.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('theme1/frontend/update_detail', [], true)
+ 5 APPPATH/Controllers/Update.php(146): view('theme1/frontend/update_detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Update->update_details()
+ 7 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Update))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 14:04:26 --> Invalid argument supplied for foreach()
+in APPPATH/Views/theme1/frontend/update_detail.php on line 149.
+ 1 APPPATH/Views/theme1/frontend/update_detail.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH/Views/theme1/frontend/update_detail.php', 149, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/theme1/frontend/update_detail.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1135): CodeIgniter\View\View->render('theme1/frontend/update_detail', [], true)
+ 5 APPPATH/Controllers/Update.php(146): view('theme1/frontend/update_detail', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(898): App\Controllers\Update->update_details()
+ 7 SYSTEMPATH/CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Update))
+ 8 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()

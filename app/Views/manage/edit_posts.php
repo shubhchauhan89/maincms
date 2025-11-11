@@ -69,8 +69,32 @@
                                 <select>     
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Text on Image</label>
+                                <input type="text" class="form-control" name="text_on_image" id="text_on_image" value="<?= $data->text_on_image; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" class="form-control" name="specifications" id="specifications" value="<?= $data->specifications; ?>">
+                            </div>
+                        </div>
+                       <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Price Info </label>
+                                <input type="text" class="form-control" name="price_info" id="price_info" value="<?= $data->price_info; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Key Point </label>
+                                <input type="text" class="form-control" name="key_point" id="key_point" value="<?= $data->key_point; ?>">
+                            </div>
+                        </div>
                     </div>
-                   
+                    
                     <div class="form-group">
                         <lable>Description</lable>
                         <textarea class="form-control" name="description" id="description"><?= $data->description?></textarea>

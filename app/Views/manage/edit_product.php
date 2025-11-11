@@ -46,7 +46,18 @@
                                 <input type="text" class="form-control" name="product_name" id="product_name" value="<?= $data->product_name; ?>">
                             </div>
                         </div>
-                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Text on Image</label>
+                                <input type="text" class="form-control" name="text_on_image" id="text_on_image" value="<?= $data->text_on_image; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" class="form-control" name="specifications" id="specifications" value="<?= $data->specifications; ?>">
+                            </div>
+                        </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>MRP <span class="text-danger"> *</span></label>
@@ -57,6 +68,18 @@
                             <div class="form-group">
                                 <label>Discount(in %) <span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" name="discount" id="discount" value="<?= $data->discount; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Price Info </label>
+                                <input type="text" class="form-control" name="price_info" id="price_info" value="<?= $data->price_info; ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Key Point </label>
+                                <input type="text" class="form-control" name="key_point" id="key_point" value="<?= $data->key_point; ?>">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -97,20 +120,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Select Related Products</label>
-                        <?php $selected = '';
-                        $rsData = !empty(json_decode($data->related_product)) ? json_decode($data->related_product) : []; ?>
-
-                        <select class="form-control products" id="r_product" name="related_product[]" multiple>
-                            <?php if ($products) : foreach ($products as $value) : if (!empty($rsData)) :
-                                        $selected =  in_array($value->id, $rsData) ? 'selected' : "";
-                                    endif ?>
-                                    <option value="<?= $value->id; ?>" <?= $selected  ?>><?= $value->product_name; ?></option>
-                            <?php endforeach;
-                            endif; ?>
-                            <select>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Select Related Products</label>
+                                <?php $selected = '';
+                                $rsData = !empty(json_decode($data->related_product)) ? json_decode($data->related_product) : []; ?>
+        
+                                <select class="form-control products" id="r_product" name="related_product[]" multiple>
+                                    <?php if ($products) : foreach ($products as $value) : if (!empty($rsData)) :
+                                                $selected =  in_array($value->id, $rsData) ? 'selected' : "";
+                                            endif ?>
+                                            <option value="<?= $value->id; ?>" <?= $selected  ?>><?= $value->product_name; ?></option>
+                                    <?php endforeach;
+                                    endif; ?>
+                                    <select>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Select Related Blog Posts</label>
+                                <?php $selectedblogs = '';
+                                $rbData = !empty(json_decode($data->related_blogposts)) ? json_decode($data->related_blogposts) : []; ?>
+                                <select class="form-control blogs" id="r_posts" name="related_blogposts[]" multiple>
+                                    <?php if ($posts) : foreach ($posts as $blogs)  : if (!empty($rbData)) :
+                                            $selectedblogs =  in_array($blogs->id, $rbData) ? 'selected' : "";
+                                            endif ?>
+                                            <option value="<?= $blogs->id; ?>" <?= $selectedblogs  ?>><?= $blogs->title; ?></option>
+                                    <?php endforeach;
+                                    endif; ?>
+                                <select>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Youtube Video URL</label>
+                            <input type="text" class="form-control" name="youtube_video_url" id="youtube_video_url" value="<?= $data->youtube_video_url; ?>">
+                        </div>
+                    </div>
+                    <div class="form-group" id="shorts-container">
+                        <label>Youtube Shorts URL</label>
+                        <?php
+                            $shortsUrls = !empty($data->youtube_shorts_urls) ? explode(',', $data->youtube_shorts_urls) : [];
+                            if (!empty($shortsUrls)) {
+                                foreach ($shortsUrls as $url): ?>
+                                    <input type="text" class="form-control my-2" name="youtube_shorts_url[]" value="<?= esc($url) ?>" placeholder="Enter YouTube Shorts URL">
+                                <?php endforeach;
+                            } else { ?>
+                                <input type="text" class="form-control my-2" name="youtube_shorts_url[]" placeholder="Enter YouTube Shorts URL">
+                            <?php } ?>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-secondary mt-2" onclick="addShortsInput()">Add Another</button>
+
                     <div class="form-group">
                         <label>Short Description <span class="text-danger"> *</span></label>
                         <textarea class="form-control" name="short_description" id="short_description"><?= $data->short_description; ?></textarea>
@@ -146,6 +209,7 @@
         CKEDITOR.replace('long_description');
         CKEDITOR.replace('specification');
         $('.products').select2();
+        $('.blogs').select2();
     })
 </script>
 <script src="<?php echo base_url('public/assets/ckeditor/ckeditor.js') ?>"></script>
@@ -181,5 +245,14 @@ function preview_image(){
     $('#previewImages').empty();
     $('#previewImages').append(html);
 }
+function addShortsInput() {
+        const container = document.getElementById('shorts-container');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'form-control my-2';
+        input.name = 'youtube_shorts_url[]';
+        input.placeholder = 'Enter YouTube Shorts URL';
+        container.appendChild(input);
+    }
 </script>
 <?= $this->endSection(); ?>

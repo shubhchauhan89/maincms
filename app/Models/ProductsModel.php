@@ -14,8 +14,8 @@ class ProductsModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['extra_change', 'product_name', 'total_inventry', 'mrp', 'discount', 
-    'main_image', 'banner', 'related_product', 'short_description', 'long_description', 
+    protected $allowedFields    = ['extra_change', 'product_name', 'total_inventry', 'mrp', 'discount', 'youtube_video_url', 'youtube_shorts_urls',
+    'main_image', 'banner', 'related_product', 'short_description', 'long_description','text_on_image','specifications','price_info','key_point', 
     'specification', 'created_by', 'update_by', 'status'];
 
     // Dates

@@ -57,6 +57,7 @@ class Users_model extends Model
 	'currency',
 	'theme_name',
 	'theme_color',
+	'theme_mode',
 	'custom_color',
 	'topbar',
 	'key',

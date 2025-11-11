@@ -14,7 +14,7 @@ class CustomSectionModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['page_id', 'upload_image', 'position', 'heading', 'description', 'created_by', 'update_by', 'status'];
+    protected $allowedFields    = ['page_id', 'upload_image', 'image_option', 'features_data', 'statistics_data', 'design_option', 'position', 'heading', 'description', 'created_by', 'update_by', 'status'];
 
     // Dates
     protected $useTimestamps = false;

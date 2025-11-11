@@ -284,6 +284,7 @@ class SettingsController extends BaseController
             'custom_color' =>  xss_clean($this->request->getVar('customColor')),
             'rbg_custom_color' => $r . "," . $g . "," . $b,
             'custom_text_color' => xss_clean($this->request->getVar('customTextColor')),
+            'theme_mode' => xss_clean($this->request->getVar('theme_mode')),
         );
 
         // bb_print_r($this->request->getVar());

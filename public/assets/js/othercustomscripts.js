@@ -2736,43 +2736,272 @@ function delete_slider_section(value, name) {
 
 /* Edit Custom Section Section. */
 function editCustom_section(value) {
-  var BASEURL = $("#url").val();
-  $.ajax({
-    url: BASEURL + "/manage/edit-custom-section/" + value,
-    type: "GET",
-    success: function (data) {
-      data = JSON.parse(data);
-      if (data.status) {
-        var pages = [];
-        $("#section_id").val(data.data.id);
-        $("#heading").val(data.data.heading);
-        $("#position").val(data.data.position);
-        $("#custom_upload_image_temp").val(data.data.upload_image);
-        CKEDITOR.instances["description"].setData(data.data.description);
-        // CKEDITOR.ClassicEditor.setData(data.data.description);
-        $("#offcanvasRightLabel").text("Update Custom Section");
-        $("#section_btn").text("Update");
-        $("#offcanvasRight").offcanvas("show");
-
-        var page_id = data.data.page_id;
-        var pagesIds = JSON.parse(page_id);
-        // $("#page_id").val(data.data.page_id);
-        // $("#page_id").trigger("change");
-        if (pagesIds) {
-          $.each(pagesIds, function (key, value) {
-            let opt = value.menu + ", 0," + value.sub_menu;
-            pages.push(opt);
-          });
-          $("#page_id").val(pages);
-          $("#page_id").trigger("change");
-        } else {
-          $("#page_id").val("");
-          $("#page_id").trigger("change");
+    var BASEURL = $("#url").val();
+    $.ajax({
+        url: BASEURL + "/manage/edit-custom-section/" + value,
+        type: "GET",
+        success: function (data) {
+            data = JSON.parse(data);
+            if (data.status) {
+                var pages = [];
+                
+                // Set basic fields
+                $("#section_id").val(data.data.id);
+                $("#heading").val(data.data.heading);
+                $("#position").val(data.data.position);
+                $("#design_option").val(data.data.design_option);
+                $("#custom_upload_image_temp").val(data.data.upload_image);
+                $("#option_image").val(data.data.image_option);
+                
+                // Set description
+                if (CKEDITOR.instances["description"]) {
+                    CKEDITOR.instances["description"].setData(data.data.description || "");
+                }
+                
+                // Update offcanvas header and button
+                $("#offcanvasRightLabel").text("Update Custom Section");
+                $("#section_btn").text("Update");
+                $("#section_btn").innerHTML = '<i class="fa fa-sync me-2"></i>Update';
+                
+                // Set image info
+                // if (data.data.upload_image) {
+                //     document.getElementById('current-image').textContent = data.data.upload_image;
+                // }
+                
+                // Get design option
+                const designOption = data.data.design_option;
+                const featuresSection = document.getElementById('features-section');
+                const statisticsSection = document.getElementById('statistics-section');
+                
+                // Find description label - check if it exists first
+                const descriptionWrapper = document.querySelector('[data-description-wrapper]');
+                let descriptionLabel = null;
+                let descriptionField = document.getElementById('description');
+                
+                if (descriptionField && descriptionField.parentElement) {
+                    // Try to find label within the form-group
+                    descriptionLabel = descriptionField.parentElement.querySelector('label');
+                    if (!descriptionLabel) {
+                        // Try to find label before the textarea
+                        descriptionLabel = descriptionField.previousElementSibling;
+                    }
+                }
+                
+                // Show/hide form sections based on design
+                function toggleDescriptionField(show) {
+                    if (descriptionField) {
+                        descriptionField.style.display = show ? 'block' : 'none';
+                    }
+                    if (descriptionLabel) {
+                        descriptionLabel.style.display = show ? 'block' : 'none';
+                    }
+                }
+                
+                // Handle Design 1 - Content Only
+                if (designOption === '1') {
+                    if (featuresSection) featuresSection.style.display = 'none';
+                    if (statisticsSection) statisticsSection.style.display = 'none';
+                    toggleDescriptionField(true);
+                }
+                // Handle Design 2 - Features
+                else if (designOption === '2') {
+                    if (featuresSection) featuresSection.style.display = 'block';
+                    if (statisticsSection) statisticsSection.style.display = 'none';
+                    toggleDescriptionField(false);
+                    
+                    // Populate features
+                    const container = document.getElementById('features-container');
+                    if (container) {
+                        container.innerHTML = '';
+                        
+                        let features = [];
+                        try {
+                            features = typeof data.data.features_data === 'string' 
+                                ? JSON.parse(data.data.features_data) 
+                                : data.data.features_data || [];
+                        } catch(e) {
+                            console.error('Error parsing features:', e);
+                            features = [];
+                        }
+                        
+                        if (features && features.length > 0) {
+                            features.forEach((feature, index) => {
+                                const featureItem = document.createElement('div');
+                                featureItem.className = 'feature-item mb-3 p-3 border rounded';
+                                featureItem.style.background = '#f8f9fa';
+                                featureItem.innerHTML = `
+                                    <div class="row align-items-end">
+                                        <div class="col-md-9">
+                                            <label class="small"><strong>Feature Title</strong></label>
+                                            <input type="text" class="form-control feature-title" value="${escapeHtml(feature.title || '')}" required>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-sm btn-outline-danger remove-feature">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                `;
+                                
+                                featureItem.querySelector('.remove-feature').addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    featureItem.remove();
+                                    updateRemoveButtons();
+                                });
+                                
+                                container.appendChild(featureItem);
+                            });
+                        } else {
+                            // Add empty feature item
+                            const featureItem = document.createElement('div');
+                            featureItem.className = 'feature-item mb-3 p-3 border rounded';
+                            featureItem.style.background = '#f8f9fa';
+                            featureItem.innerHTML = `
+                                <div class="row align-items-end">
+                                    <div class="col-md-9">
+                                        <label class="small"><strong>Feature Title</strong></label>
+                                        <input type="text" class="form-control feature-title" placeholder="e.g., Swimming Pool" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-sm btn-outline-danger remove-feature" style="display: none;">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            container.appendChild(featureItem);
+                        }
+                        
+                        updateRemoveButtons();
+                    }
+                }
+                // Handle Design 3 - Statistics
+                else if (designOption === '3') {
+                    if (featuresSection) featuresSection.style.display = 'none';
+                    if (statisticsSection) statisticsSection.style.display = 'block';
+                    toggleDescriptionField(true);
+                    
+                    // Populate statistics
+                    const container = document.getElementById('statistics-container');
+                    if (container) {
+                        container.innerHTML = '';
+                        
+                        let statistics = [];
+                        try {
+                            statistics = typeof data.data.statistics_data === 'string' 
+                                ? JSON.parse(data.data.statistics_data) 
+                                : data.data.statistics_data || [];
+                        } catch(e) {
+                            console.error('Error parsing statistics:', e);
+                            statistics = [];
+                        }
+                        
+                        if (statistics && statistics.length > 0) {
+                            statistics.forEach((stat, index) => {
+                                const statItem = document.createElement('div');
+                                statItem.className = 'statistic-item mb-3 p-3 border rounded';
+                                statItem.style.background = '#f8f9fa';
+                                statItem.innerHTML = `
+                                    <div class="row align-items-end">
+                                        <div class="col-md-4">
+                                            <label class="small"><strong>Number</strong></label>
+                                            <input type="text" class="form-control statistic-number" value="${escapeHtml(stat.number || '')}" required>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <label class="small"><strong>Label</strong></label>
+                                            <input type="text" class="form-control statistic-label" value="${escapeHtml(stat.label || '')}" required>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="button" class="btn btn-sm btn-outline-danger remove-statistic">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                `;
+                                
+                                statItem.querySelector('.remove-statistic').addEventListener('click', function(e) {
+                                    e.preventDefault();
+                                    statItem.remove();
+                                    updateRemoveStatisticButtons();
+                                });
+                                
+                                container.appendChild(statItem);
+                            });
+                        } else {
+                            // Add empty statistic item
+                            const statItem = document.createElement('div');
+                            statItem.className = 'statistic-item mb-3 p-3 border rounded';
+                            statItem.style.background = '#f8f9fa';
+                            statItem.innerHTML = `
+                                <div class="row align-items-end">
+                                    <div class="col-md-4">
+                                        <label class="small"><strong>Number</strong></label>
+                                        <input type="text" class="form-control statistic-number" placeholder="e.g., 500+" required>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label class="small"><strong>Label</strong></label>
+                                        <input type="text" class="form-control statistic-label" placeholder="e.g., Happy Clients" required>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button type="button" class="btn btn-sm btn-outline-danger remove-statistic" style="display: none;">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            container.appendChild(statItem);
+                        }
+                        
+                        updateRemoveStatisticButtons();
+                    }
+                }
+                
+                // Set page
+                var page_id = data.data.page_id;
+                if (page_id) {
+                    try {
+                        var pagesIds = JSON.parse(page_id);
+                        
+                        if (pagesIds && pagesIds.length > 0) {
+                            var pages = [];
+                            $.each(pagesIds, function (key, value) {
+                                let opt = value.menu + ", 0," + value.sub_menu;
+                                pages.push(opt);
+                            });
+                            $("#page_id").val(pages);
+                            $("#page_id").trigger("change");
+                        } else {
+                            $("#page_id").val("");
+                            $("#page_id").trigger("change");
+                        }
+                    } catch(e) {
+                        console.error('Error parsing page_id:', e);
+                        $("#page_id").val("");
+                    }
+                }
+                
+                // Show offcanvas
+                $("#offcanvasRight").offcanvas("show");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('AJAX Error:', error);
+            Swal.fire({ 
+                icon: "error", 
+                text: "Error loading section data: " + error 
+            });
         }
-      }
-    },
-  });
+    });
 }
+
+// Helper function to escape HTML
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+
 
 /* Delete Custom  Section. */
 function deleteCustom_section(value) {

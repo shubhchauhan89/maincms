@@ -101,14 +101,20 @@ class Home extends UiController
         /**
          * Make products list section array data
          */
-        $post_updates =  $this->user_slider->getUpdateLists('Home');
+        $post_updates = $this->user_slider->getUpdateLists('Home');
         
-        if(count($post_updates)){
-        $post_updates = array_slice($post_updates[0],-6);
+        $latest_post = [];
+        if (!empty($post_updates) && isset($post_updates[0]['posts'])) {
+            $posts_array = $post_updates[0]['posts'];
+            $recent_posts = array_slice($posts_array, -6);
+            
+            $latest_post[] = [
+                'posts'         => $recent_posts,
+                'section_id'    => $post_updates[0]['section_id'],
+                'sub_menu_name' => $post_updates[0]['sub_menu_name']
+            ];
         }
-        
-        $latest_post[] =  $post_updates;
-        
+                
         
         /**
          * Make Updates and Post list section array data

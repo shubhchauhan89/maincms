@@ -402,7 +402,9 @@
 									<select class="form-control" name="theme_name">
 										<option value="theme1" <?php if ($userInfo->theme_name == 'theme1') echo 'selected'; ?>>Theme 1</option>
 										<option value="theme2" <?php if ($userInfo->theme_name == 'theme2') echo 'selected'; ?>>Theme 2</option>
-										<option value="theme3" <?php if ($userInfo->theme_name == 'theme3') echo 'selected'; ?>>Theme 3</option>
+										<option value="theme3" <?php if ($userInfo->theme_name == 'theme3') echo 'selected'; ?>>E Commerce</option>
+										<option value="theme4" <?php if ($userInfo->theme_name == 'theme4') echo 'selected'; ?>>Real State</option>
+										<option value="theme5" <?php if ($userInfo->theme_name == 'theme5') echo 'selected'; ?>>Doctor/Medical</option>
 									</select>
 								</div>
 							</div>
@@ -432,10 +434,20 @@
 								</div>
 							</div>
 
-							<div class="form-group">
+							<!-- <div class="form-group">
 								<div class="mb-3">
 									<label class="form-label font-weight-bold">Theme text color</label>
-									<input type="color" class="form-control" name="customTextColor"  value="<?php echo $userInfo->custom_text_color;?>" />
+									<input type="color" class="form-control" name="customTextColor"  value="<?php // echo $userInfo->custom_text_color;?>" />
+								</div>
+							</div> -->
+
+							<div class="form-group">
+								<div class="mb-3">
+									<label class="form-label font-weight-bold">Theme mode</label>
+									<select class="form-control" name="theme_mode">
+										<option value="light" <?php if ($userInfo->theme_mode == 'light') echo 'selected'; ?>>Light</option>
+										<option value="dark" <?php if ($userInfo->theme_mode == 'dark') echo 'selected'; ?>>Dark</option>										
+									</select>
 								</div>
 							</div>
 

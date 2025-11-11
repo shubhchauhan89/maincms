@@ -23,12 +23,41 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="form-group">
-								<label>Slider Image <span class="text-danger">*</span></label>
-								<input type="file" class="form-control" accept="image/png, image/jpeg" name="slider_image" id="slider_image">
-								<input type="hidden" name="slider_image_temp" id="slider_image_temp">
+								<label>Media Type</label>
+								<div>
+									<input type="radio" name="media_type" id="media_type_image" value="image" checked>
+									<label for="media_type_image">Images</label>
+									
+									<input type="radio" name="media_type" id="media_type_video" value="video">
+									<label for="media_type_video">Video</label>
+								</div>
 							</div>
-							<img src="" class="img-preview-img w-50" />
+
+							<!-- Video Upload -->
+							<div id="video-upload-section" style="display: none;">
+								<div class="form-group">
+									<label>Upload Video (Single)</label>
+									<input type="file" class="form-control" accept="video/mp4, video/webm, video/ogg" name="video" id="video">
+									<small>Max 100MB - MP4, WebM, OGG</small>
+								</div>
+								<video id="video-preview" width="100" height="100" style="display:none; margin-top: 10px;"></video>
+							</div>
+
+							<!-- Image Upload -->
+							<div id="image-upload-section">
+								<div class="form-group">
+									<label>Upload Image</label>
+									<input type="file" class="form-control" accept="image/png, image/jpeg, image/jpg, image/webp" name="slider_images" id="slider_images">
+									<small>Max 5MB each - PNG, JPEG, WebP - Max 20 images</small>
+								</div>
+								<div id="image-preview-container" style="margin-top: 10px;">
+									<!-- Previews here -->
+								</div>
+							</div>
 						</div>
+
+
+
 						<div class="col-md-4">
 							<div class="form-group">
 								<label>Heading Color<span class="text-danger">*</span></label>
@@ -192,6 +221,56 @@
 		$('.pages').select2();
 		$('.slider_name').select2();
 	});
+// Toggle media type
+document.querySelectorAll('input[name="media_type"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        if (this.value === 'video') {
+            document.getElementById('video-upload-section').style.display = 'block';
+            document.getElementById('image-upload-section').style.display = 'none';
+            document.getElementById('slider_images').removeAttribute('required');
+            document.getElementById('video').setAttribute('required', 'required');
+        } else {
+            document.getElementById('video-upload-section').style.display = 'none';
+            document.getElementById('image-upload-section').style.display = 'block';
+            document.getElementById('video').removeAttribute('required');
+            document.getElementById('slider_images').setAttribute('required', 'required');
+        }
+    });
+});
+
+// Video preview
+document.getElementById('video')?.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const video = document.getElementById('video-preview');
+            video.src = event.target.result;
+            video.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Image previews
+document.getElementById('slider_images')?.addEventListener('change', function(e) {
+    const container = document.getElementById('image-preview-container');
+    container.innerHTML = '';
+    
+    Array.from(e.target.files).forEach((file, index) => {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = document.createElement('img');
+            img.src = event.target.result;
+            img.width = 100;
+            img.height = 100;
+            img.style.margin = '5px';
+            img.style.border = '1px solid #ddd';
+            container.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    });
+});
 </script>
 <script src="<?php echo base_url('public/assets/js/othercustomscripts.js') ?>"></script>
 

@@ -40,6 +40,18 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>Text on Image</label>
+                                <input type="text" class="form-control" name="text_on_image" id="text_on_image">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" class="form-control" name="specifications" id="specifications">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
                                 <label>Total Inventry <span class="text-danger"> *</span></label>
                                 <input type="text" class="form-control" name="total_inventry" id="total_inventry">
                             </div>
@@ -56,7 +68,18 @@
                                 <input type="text" class="form-control" name="discount" id="discount">
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Price Info </label>
+                                <input type="text" class="form-control" name="price_info" id="price_info">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Key Point </label>
+                                <input type="text" class="form-control" name="key_point" id="key_point">
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Images <span class="text-danger"> *</span>( <b>Note: </b>You can select single or multiple images)</label>
@@ -66,14 +89,44 @@
                     </div>
                     <div class="row product-gallery" id="image_preview">
                     </div>
-                    <div class="form-group">
-                        <label>Select Related Products</label>
-                        <select class="form-control products" id="r_product" name="related_product[]" multiple>
-                            <?php if ($products) : foreach ($products as $value) : ?>
-                                    <option value="<?= $value->id; ?>"><?= $value->product_name; ?></option>
-                            <?php endforeach;
-                            endif; ?>
-                        <select>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Select Related Products</label>
+                                <select class="form-control products" id="r_product" name="related_product[]" multiple>
+                                    <?php if ($products) : foreach ($products as $value) : ?>
+                                            <option value="<?= $value->id; ?>"><?= $value->product_name; ?></option>
+                                    <?php endforeach;
+                                    endif; ?>
+                                <select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Youtube Video URL</label>
+                                <input type="text" class="form-control" name="youtube_video_url" id="youtube_video_url">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="form-group" id="shorts-container">
+                               <label>Youtube Shorts URL</label>
+                               <input type="text" class="form-control my-2" name="youtube_shorts_url[]" placeholder="Enter YouTube Shorts URL" id="youtube_shorts_url">
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary" onclick="addShortsInput()">Add Another</button>
+                        </div>
+                        
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Select Related Blog Posts</label>
+                                <select class="form-control blogs" id="r_posts" name="related_blogposts[]" multiple>
+                                    <?php if ($posts) : foreach ($posts as $blogs) : ?>
+                                            <option value="<?= $blogs->id; ?>"><?= $blogs->title; ?></option>
+                                    <?php endforeach;
+                                    endif; ?>
+                                <select>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Short Description <span class="text-danger"> *</span></label>
@@ -112,7 +165,9 @@
         CKEDITOR.replace('long_description');
         CKEDITOR.replace('specification');
         $('.products').select2();
+        $('.blogs').select2();
     });
+
 
 
     function preview_image(){
@@ -146,6 +201,16 @@
         //     }
         // })
     }
+
+function addShortsInput() {
+    const container = document.getElementById('shorts-container');
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'youtube_shorts_url[]';
+    input.className = 'form-control my-2';
+    input.placeholder = 'Enter YouTube Shorts URL';
+    container.appendChild(input);
+}
 </script>
 <script src="<?php echo base_url('public/assets/ckeditor/ckeditor.js') ?>"></script>
 <script src="<?php echo base_url('public/assets/js/othercustomscripts.js') ?>"></script>

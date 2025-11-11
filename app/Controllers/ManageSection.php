@@ -89,50 +89,101 @@ class ManageSection extends BaseController
         return view('manage/new_slider', $data);
     }
 
-    //Save slider
+
+
+// Save slider
     public function save_slider()
     {
         if (!$this->validate([
             'name' => 'required|is_unique[seo_slider.name]',
         ])) {
             echo json_encode(['status' => false, 'validation' => true, 'message' => 'This name is already exist.']);
-        } else {
+            return;
+        }
 
-            if ($this->session->has('login_user')) {
-                $user_data = $this->session->get('login_user');
+        if ($this->session->has('login_user')) {
+            $user_data = $this->session->get('login_user');
+        }
+
+        $media_type = xss_clean($this->request->getVar('media_type'));
+        $slider_images = [];
+        $video_file = NULL;
+        $video_caption = NULL;
+        $file_name = NULL; 
+
+        // Handle Video Upload
+        if ($media_type === 'video') {
+            $videoFile = $this->request->getFile('video');
+            
+            if ($videoFile && $videoFile->isValid()) {
+                // Validate video file
+                if (!in_array($videoFile->getMimeType(), ['video/mp4', 'video/webm', 'video/ogg'])) {
+                    echo json_encode(['status' => false, 'message' => 'Invalid video format. Use MP4, WebM, or OGG.']);
+                    return;
+                }
+                
+                if ($videoFile->getSize() > 104857600) { // 100MB
+                    echo json_encode(['status' => false, 'message' => 'Video file exceeds 100MB limit.']);
+                    return;
+                }
+
+                $video_file = $videoFile->getRandomName();
+                $videoFile->move('public/uploads/client_videos/', $video_file);
+                $video_caption = xss_clean($this->request->getVar('video_caption'));
+            } else {
+                echo json_encode(['status' => false, 'message' => 'Please upload a video file.']);
+                return;
             }
+        }
 
+        // Handle Image Uploads
+        if ($media_type === 'image') {
             $file_name = NULL;
-            $file = $this->request->getFile('slider_image');
+            $file = $this->request->getFile('slider_images');
             if ($file->isValid()) {
                 $file_name = $file->getRandomName();
                 $file->move('public/uploads/slider_images/', $file_name);
             }
+        }
 
-            $data = array(
-                'text_color' => xss_clean($this->request->getVar('text_color')),
-                'heading_color' => xss_clean($this->request->getVar('heading_color')),
-                'name' => xss_clean($this->request->getVar('name')),
-                'title' => xss_clean($this->request->getVar('title')),
-                'description' => xss_clean($this->request->getVar('description')),
-                'title_font_family' => xss_clean($this->request->getVar('fontStyle')),
-                'desc_font_family' => xss_clean($this->request->getVar('descFontStyle')),
-                'description_font_size' => xss_clean($this->request->getVar('descriptionFontSize')),
-                'title_font_size' => xss_clean($this->request->getVar('titleFontSize')),
-                'blur_on_description' => xss_clean($this->request->getVar('blurDescription')),
-                'image_blur' => xss_clean($this->request->getVar('imageBlur')),
-                'content_position' => xss_clean($this->request->getVar('contentPosition')),
-                'slider_image' => $file_name,
-                'created_by' => $user_data["user_id"]
-            );
-            $return = $this->manage->save_slider($data);
-            if ($return) {
-                echo json_encode(['status' => true, 'message' => 'Slider saved successfully.']);
-            } else {
-                echo json_encode(['status' => false, 'message' => 'Their is some problem. Please try again.']);
-            }
+        // Prepare data for database
+        $data = [
+            'text_color' => xss_clean($this->request->getVar('text_color')),
+            'heading_color' => xss_clean($this->request->getVar('heading_color')),
+            'name' => xss_clean($this->request->getVar('name')),
+            'title' => xss_clean($this->request->getVar('title')),
+            'description' => xss_clean($this->request->getVar('description')),
+            'title_font_family' => xss_clean($this->request->getVar('fontStyle')),
+            'desc_font_family' => xss_clean($this->request->getVar('descFontStyle')),
+            'description_font_size' => xss_clean($this->request->getVar('descriptionFontSize')),
+            'title_font_size' => xss_clean($this->request->getVar('titleFontSize')),
+            'blur_on_description' => xss_clean($this->request->getVar('blurDescription')),
+            'image_blur' => xss_clean($this->request->getVar('imageBlur')),
+            'content_position' => xss_clean($this->request->getVar('contentPosition')),
+            'slider_image' => $file_name,
+            'video' => $video_file,
+            'media_type' => $media_type,
+            'video_caption' => $video_caption,
+            'created_by' => $user_data["user_id"]
+        ];
+
+
+        // Save to database
+        $return = $this->manage->save_slider($data);
+        
+        if ($return) {
+            echo json_encode([
+                'status' => true, 
+                'message' => ucfirst($media_type) . ' slider saved successfully.'
+            ]);
+        } else {
+            echo json_encode([
+                'status' => false, 
+                'message' => 'There is some problem. Please try again.'
+            ]);
         }
     }
+
 
     public function edit_slider($id){
         
@@ -376,11 +427,15 @@ class ManageSection extends BaseController
                 'page_id' => json_encode($arr),
                 'position' => xss_clean($this->request->getVar('position')),
                 'image_option' => xss_clean($this->request->getVar('option_image')),
+                'design_option' => xss_clean($this->request->getVar('design_option')),
+                'features_data' => xss_clean($this->request->getVar('features_data')),
+                'statistics_data' => xss_clean($this->request->getVar('statistics_data')),
                 'heading' => $heading,
                 'description' => $this->request->getVar('des'),
                 'upload_image' => $file_name,
                 'created_by' => $user_data["user_id"]
             );
+
 
             $return = $this->manage->save_custom_section($data);           
             $last_id = $this->database->insertID();
@@ -447,23 +502,32 @@ class ManageSection extends BaseController
                 'page_id' => json_encode($arr),
                 'position' => xss_clean($this->request->getVar('position')),
                 'image_option' => xss_clean($this->request->getVar('option_image')),
+                'design_option' => xss_clean($this->request->getVar('design_option')),
+                'features_data' => xss_clean($this->request->getVar('features_data')),
+                'statistics_data' => xss_clean($this->request->getVar('statistics_data')),
                 'heading' => $heading,
                 'description' => $this->request->getVar('des'),
                 'upload_image' => $file_name,
                 'update_by' => $user_data["user_id"],
                 'updated_at' =>  date("Y-m-d H:i:s")
             );
+
         } else {
             $data = array(
                 //'page_id' => ltrim($page_id),
                 'page_id' => json_encode($arr),
                 'position' => xss_clean($this->request->getVar('position')),
+                'design_option' => xss_clean($this->request->getVar('design_option')),
+                'features_data' => xss_clean($this->request->getVar('features_data')),
+                'statistics_data' => xss_clean($this->request->getVar('statistics_data')),
+                'image_option' => xss_clean($this->request->getVar('option_image')),
                 'heading' => $heading,
                 'description' => $this->request->getVar('des'),
                 'update_by' => $user_data["user_id"],
                 'updated_at' =>  date("Y-m-d H:i:s")
             );
         }
+
 
 
         $return = $this->manage->update_custom_section($data, $id);
@@ -785,6 +849,7 @@ class ManageSection extends BaseController
         }
         $data['data'] =  $this->manage->all_Products($user_data["user_id"]);
         $data['color'] =  getThemeColor($user_data["user_id"]);
+        $data['posts'] =  $this->manage->all_posts($user_data["user_id"]);
         $data['title'] = "Products";
         return view('manage/products', $data);
     }
@@ -794,6 +859,7 @@ class ManageSection extends BaseController
             $user_data = $this->session->get('login_user');
         }
         $data['products'] =  $this->manage->all_Products($user_data["user_id"]);
+        $data['posts'] =  $this->manage->all_posts($user_data["user_id"]);
         $data['color'] =  getThemeColor($user_data["user_id"]);
         $data['title'] = "Add Products";
         return view('manage/add_products', $data);
@@ -834,12 +900,22 @@ class ManageSection extends BaseController
 
             $related_product =  $this->request->getVar('related_product');
             $related_product = json_encode($related_product);
+            
+            $related_blogposts =  $this->request->getVar('related_blogposts');
+            $related_blogposts = json_encode($related_blogposts);
 
             $product_name = xss_clean($this->request->getVar('product_name'));
             $product_name = ltrim($product_name);
             $product_name = preg_replace('/[^0-9a-zA-Z ]/', '', $product_name);
             $slug    = strtolower(str_replace(" ", "-", $product_name));
-
+            $shortUrls = $this->request->getVar('youtube_shorts_url');
+            $shortUrlsSanitized = [];
+            
+            if (!empty($shortUrls)) {
+                foreach ($shortUrls as $url) {
+                    $shortUrlsSanitized[] = xss_clean(trim($url));
+                }
+            }
             $data = array(
                 'product_name' => $product_name,
                 "menu_link"    => $slug,
@@ -847,12 +923,19 @@ class ManageSection extends BaseController
                 'total_inventry' => xss_clean($this->request->getVar('total_inventry')),
                 'mrp' => xss_clean($this->request->getVar('mrp')),
                 'discount' => xss_clean($this->request->getVar('discount')),
+                'youtube_video_url' => xss_clean($this->request->getVar('youtube_video_url')),
+                 'youtube_shorts_urls' => implode(',', $shortUrlsSanitized),
                 'short_description' => $this->request->getVar('short'),
                 'long_description' => $this->request->getVar('long'),
                 'specification' => $this->request->getVar('specifi'),
+                'text_on_image' => xss_clean($this->request->getVar('text_on_image')),
+                'specifications' => xss_clean($this->request->getVar('specifications')),
+                'price_info' => xss_clean($this->request->getVar('price_info')),
+                'key_point' => xss_clean($this->request->getVar('key_point')),
                 'main_image' => $product_image[0],
                 'banner' => $product_banner,
                 'related_product' => $related_product,
+                'related_blogposts' => $related_blogposts,
                 'created_by' => $user_data["user_id"]
             );
 
@@ -862,7 +945,7 @@ class ManageSection extends BaseController
                     foreach ($product_image as $pi) {
                         $p_data[] = [
                             'product_image' => $pi,
-                            'product_id'    => $return,
+                            'product_id'    => $return["id"],
                             'created_by'    => $user_data["user_id"],
                         ];
                     }
@@ -907,6 +990,7 @@ class ManageSection extends BaseController
         $id = base64_decode($id);
         $data['product_images'] = $this->product_images->select(['id', 'product_image'])->where('product_id', $id)->findAll();
         $data['products'] =  $this->manage->all_Products($user_data["user_id"]);
+        $data['posts'] =  $this->manage->all_posts($user_data["user_id"]);
         $data['data'] =  $this->manage->edit_products($id);
         $data['color'] =  getThemeColor($user_data["user_id"]);
         $data['title'] = "Edit Product";
@@ -960,12 +1044,22 @@ class ManageSection extends BaseController
 
         $related_product =  $this->request->getVar('related_product');
         $related_product = json_encode($related_product);
+        
+        $related_blogposts =  $this->request->getVar('related_blogposts');
+        $related_blogposts = json_encode($related_blogposts);
 
         $product_name = xss_clean($this->request->getVar('product_name'));
         $product_name = ltrim($product_name);
         $product_name = preg_replace('/[^0-9a-zA-Z ]/', '', $product_name);
         $slug    = strtolower(str_replace(" ", "-", $product_name));
-
+        $shortUrls = $this->request->getVar('youtube_shorts_url');
+        $shortUrlsSanitized = [];
+        
+        if (!empty($shortUrls)) {
+            foreach ($shortUrls as $url) {
+                $shortUrlsSanitized[] = xss_clean(trim($url));
+            }
+        }
         $data = array(
             'product_name' => $product_name,
             "menu_link"    => $slug,
@@ -973,10 +1067,17 @@ class ManageSection extends BaseController
             'total_inventry' => xss_clean($this->request->getVar('total_inventry')),
             'mrp' => xss_clean($this->request->getVar('mrp')),
             'discount' => xss_clean($this->request->getVar('discount')),
+            'youtube_video_url' => xss_clean($this->request->getVar('youtube_video_url')),
+            'youtube_shorts_urls' => implode(',', $shortUrlsSanitized),
             'short_description' => $this->request->getVar('short'),
             'long_description' => $this->request->getVar('long'),
             'specification' => $this->request->getVar('specifi'),
+            'text_on_image' => xss_clean($this->request->getVar('text_on_image')),
+            'specifications' => xss_clean($this->request->getVar('specifications')),
+            'price_info' => xss_clean($this->request->getVar('price_info')),
+            'key_point' => xss_clean($this->request->getVar('key_point')),
             'related_product' => $related_product,
+            'related_blogposts' => $related_blogposts,
             'main_image' => $product_img,
             'banner' => $banner_file,
             'update_by' => $user_data["user_id"],
@@ -989,10 +1090,11 @@ class ManageSection extends BaseController
                 foreach ($product_image as $pi) {
                     $p_data[] = [
                         'product_image' => $pi,
-                        'product_id'    => $return,
+                        'product_id'    => $id,
                         'created_by'    => $user_data["user_id"],
                     ];
                 }
+                
                 $this->product_images->insertBatch($p_data);
             }
 
@@ -1386,6 +1488,10 @@ class ManageSection extends BaseController
                 'status' => xss_clean($this->request->getVar('status')),
                 'featured' => xss_clean($this->request->getVar('featured')),
                 'schedule_time' => $schedule_time,
+                'text_on_image' => xss_clean($this->request->getVar('text_on_image')),
+                'specifications' => xss_clean($this->request->getVar('specifications')),
+                'price_info' => xss_clean($this->request->getVar('price_info')),
+                'key_point' => xss_clean($this->request->getVar('key_point')),
                 'description' => $this->request->getVar('content'),
                 'created_by' => $user_data["user_id"]
             );
@@ -1438,6 +1544,10 @@ class ManageSection extends BaseController
             'image' => $post_images,
             'status' => xss_clean($this->request->getVar('status')),
             'featured' => xss_clean($this->request->getVar('featured')),
+            'text_on_image' => xss_clean($this->request->getVar('text_on_image')),
+            'specifications' => xss_clean($this->request->getVar('specifications')),
+            'price_info' => xss_clean($this->request->getVar('price_info')),
+            'key_point' => xss_clean($this->request->getVar('key_point')),
             'description' => $this->request->getVar('content'),
             'update_by' => $user_data["user_id"],
             'updated_at' => date("Y-m-d H:i:s")

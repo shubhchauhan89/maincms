@@ -2,8 +2,8 @@
 $heading = "";
 if (!empty($products)) { 
     foreach ($products as $product) {
-         $heading = $service['sub_menu_name'];
-        unset($service['sub_menu_name']);
+         $heading = $product['sub_menu_name'];
+        unset($product['sub_menu_name']);
         if ($product['section_id'] == $myurl['section_id']) {
             if (isset($product['section_id'])) {
                 unset($product['section_id']);

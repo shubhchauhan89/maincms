@@ -475,6 +475,9 @@ class User_details
                     $temp['heading'] = $value['heading'];
                     $temp['description'] = $value['description'];
                     $temp['image_option'] = $value['image_option'];
+                    $temp['features_data'] = $value['features_data'];
+                    $temp['statistics_data'] = $value['statistics_data'];
+                    $temp['design_option'] = $value['design_option'];
                     $custom[] = $temp;
                 }
             }
@@ -572,10 +575,12 @@ class User_details
                 $slider_image_list = [];
                 foreach ($slider as $v) {
 
-                    $this->slider_images->select(['title_font_family', 'desc_font_family', 'slider_image','blur_on_description', 'title_font_size', 'description_font_size', 'image_blur','content_position', 'title', 'description', 'text_color', 'heading_color']);
+                    $this->slider_images->select(['title_font_family', 'desc_font_family', 'slider_image','video','media_type', 'blur_on_description', 'title_font_size', 'description_font_size', 'image_blur','content_position', 'title', 'description', 'text_color', 'heading_color']);
                     $image = $this->slider_images->find($v);
                     if(!empty($image)){
                         $img   = $image['slider_image'];
+                        $video   = $image['video'];
+                        $media_type   = $image['media_type'];
                         $title = $image['title'];
                         $desc  = $image['description'];
                         $text  = $image['text_color'];
@@ -587,7 +592,7 @@ class User_details
                         $content_position  = $image['content_position'];
                         $title_style  = $image['title_font_family'];
                         $desc_style   = $image['desc_font_family'];
-                        $arr = ['title_style' => $title_style, 'desc_style' => $desc_style, "image" => $img, "title" => $title, "desc" => $desc, "text_color" => $text, 'heading_color' => $head, 'blur' => $blur, 'image_blur' => $image_blur, 'title_font_size' => $title_font_size, 'description_font_size' => $description_font_size, 'content_position' => $content_position];
+                        $arr = ['title_style' => $title_style, 'desc_style' => $desc_style, "image" => $img,  "media_type" => $media_type, "video" => $video, "title" => $title, "desc" => $desc, "text_color" => $text, 'heading_color' => $head, 'blur' => $blur, 'image_blur' => $image_blur, 'title_font_size' => $title_font_size, 'description_font_size' => $description_font_size, 'content_position' => $content_position];
                         $slider_image_list[] = $arr;
                     }
                 }
@@ -710,6 +715,7 @@ class User_details
                 if(!empty($testimo)){
                     $arr = [
                         "image" => $testimo['image'],
+                        "name" => $testimo['name'],
                     ];
                     $logo_slider_lists[] = $arr;
                 }
@@ -850,6 +856,10 @@ class User_details
                             'menu_link'        => $prod['menu_link'],
                             "total_inventry"   => $prod['total_inventry'],
                             "mrp"              => $prod['mrp'],
+                            "text_on_image"              => $prod['text_on_image'],
+                            "key_point"              => $prod['key_point'],
+                            "price_info"              => $prod['price_info'],
+                            "specifications"              => $prod['specifications'],
                             'discount'         => $prod['discount'],
                             "extra_charge"     => $prod['extra_charge'],
                             "main_image"       => $prod['main_image'],
@@ -880,7 +890,6 @@ class User_details
      * @return void
      */
     public function getUpdateLists($data = null){
-
         $this->posts = new PostsModel();
         $this->posts_section = new PostSectionModel();
 
@@ -893,33 +902,44 @@ class User_details
                 $post_pages = json_decode($posts_detail['pages_id']);
                 $posts      = json_decode($posts_detail['post_id']);
                 $product_list = [];
+                
                 foreach ($posts as $v) {
                     $this->posts->select('*');
                     $update = $this->posts->where('status', 'published')->find($v);
                     if(!empty($update)){
                         $arr = [
-                            'id'         => $update['id'],
-                            'title'      => $update['title'],
-                            'slug'       => $update['slug'],
-                            "image"      => $update['image'],
-                            "description"=> $update['description'],
-                            'created_at' => $update['created_at']
+                            'id'             => $update['id'],
+                            'title'          => $update['title'],
+                            'slug'           => $update['slug'],
+                            'image'          => $update['image'],
+                            'description'    => $update['description'],
+                            'text_on_image'  => $update['text_on_image'],
+                            'specifications' => $update['specifications'],
+                            'price_info'     => $update['price_info'],
+                            'key_point'      => $update['key_point'],
+                            'created_at'     => $update['created_at']
                         ];
                         $product_list[] = $arr;
                     }
                 }
-                $product_list['section_id'] = $posts_detail['id'];
-                 $product_list['sub_menu_name'] = $posts_detail['heading'];
+                
+                // ✅ CORRECT: Create proper structure
+                $final_posts_item = [
+                    'posts'         => $product_list,
+                    'section_id'    => $posts_detail['id'],
+                    'sub_menu_name' => $posts_detail['heading']
+                ];
 
                 foreach ($post_pages as $sp) {
                     if ($sp->sub_menu_title == $data) {
-                        $final_posts[] = $product_list;
+                        $final_posts[] = $final_posts_item;
                     }
                 }
             }
         }
         return $final_posts;
     }
+
 
     public function getSortOrder($data = null, $menu_id = 0, $submenu_id = 0){
 
@@ -1019,6 +1039,10 @@ class User_details
                             'product_name'     => $prod['product_name'],
                             'menu_link'        => $prod['menu_link'],
                             "total_inventry"   => $prod['total_inventry'],
+                            "text_on_image"              => $prod['text_on_image'],
+                            "key_point"              => $prod['key_point'],
+                            "price_info"              => $prod['price_info'],
+                            "specifications"              => $prod['specifications'],
                             "mrp"              => $prod['mrp'],
                             'discount'         => $prod['discount'],
                             "extra_charge"     => $prod['extra_charge'],

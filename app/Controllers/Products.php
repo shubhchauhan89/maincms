@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ProductsModel;
+use App\Models\PostsModel;
 use App\Libraries\User_details;
 use App\Libraries\Arranges_data;
 use App\Models\CartHistoryModel;
@@ -121,7 +122,9 @@ class Products extends UiController {
         
         if(!empty($slug)){
                $this->product = new ProductsModel();
+               $this->posts = new PostsModel();
             $product = $this->product->where('menu_link', $slug)->first();
+          
             $product_images = $this->product_images->where('product_id', $product['id'])->orderBY('id', 'desc')->findAll();
             
             if (!empty($product['related_product'])) {
@@ -133,10 +136,24 @@ class Products extends UiController {
                     }
                     $all_products = $related_products;
                 } else {
-                    $all_products = $this->product->findAll();
+                    $all_products = [];
                 }
             } else {
-                $all_products = $this->product->findAll();
+                $all_products = [];
+            }
+            if (!empty($product['related_blogposts'])) {
+                $related_blogposts_ids = json_decode($product['related_blogposts'], true); 
+                if ($related_blogposts_ids !== null) {
+                    $related_blogs = [];
+                    foreach ($related_blogposts_ids as $related_blog_id) {
+                        $related_blogs[] = $this->posts->find($related_blog_id);
+                    }
+                    $all_blogs = $related_blogs;
+                } else {
+                    $all_blogs = [];
+                }
+            } else {
+                $all_blogs = [];
             }
             $pageData = [
                 'title' => 'Product | '.$slug,
@@ -148,6 +165,7 @@ class Products extends UiController {
 
                 'product'       => $product,
                 'all_products'  => $all_products,
+                'all_blogs'  => $all_blogs,
 
                 'cart'          => cart_history(),
                 'colors'        => $this->colors,

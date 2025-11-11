@@ -166,7 +166,7 @@ $status = (int)$content;
 		</li>
 
 		
-      <li class="nav-item <?= ($status == 1) ? 'd-block' : 'd-none'; ?>">
+      <li class="nav-item <?= ($status == 0) ? 'd-block' : 'd-none'; ?>">
 			<a class="nav-link with-sub" href="#"><span class="shape1"></span><span class="shape2"></span><i class="ti-plug sidemenu-icon"></i><span class="sidemenu-label">SEO Plugin</span>
 				<i class="angle fe fe-chevron-right"></i></a>
 			<ul class="nav-sub">

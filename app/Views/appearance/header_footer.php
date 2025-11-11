@@ -138,7 +138,7 @@
                         <div class="col-md-6">
                             <div class="form-group ">
                                 <div class="mb-3">
-                                    <label class="form-label fs-15">Navbar Text Color *</label>
+                                    <label class="form-label fs-15">Text Color *</label>
                                     <input type="color" class="form-control" name="navbar_text" id="navbar_text" value="<?php isset($info->navbar_text);
                                                                                                                         echo $info->navbar_text;
                                                                                                                         "#000000"; ?>">
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 d-none">
                             <div class="form-group ">
                                 <div class="mb-3">
                                     <label class="form-label fs-15">Searchbar Color *</label>
@@ -170,7 +170,7 @@
                         </div>
                       
                         <div class="col-md-4">
-                            <div class="form-group ">
+                            <div class="form-group d-none">
                                 <div class="mb-3">
                                     <label class="form-label fs-15">Searchbar Button Color *</label>
                                     <input type="color" class="form-control" name="searchbar_button_color" id="searchbar_button_color" value="<?php isset($info->searchbar_button_color);
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="form-group ">
+                            <div class="form-group d-none">
                                 <div class="mb-3">
                                     <label class="form-label fs-15">Footer Background Color *</label>
                                     <input type="color" class="form-control" name="footer_background" id="footer_background" value="<?php isset($info->footer_background);
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="form-group ">
+                            <div class="form-group d-none">
                                 <div class="mb-3">
                                     <label class="form-label fs-15">Footer Text Color *</label>
                                     <input type="color" class="form-control" name="footer_text_color" id="footer_text_color" value="<?php isset($info->footer_text_color);

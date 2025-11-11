@@ -14,7 +14,7 @@ class SliderModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title_font_family', 'desc_font_family', 'name', 'blur_on_description', 'image_blur','title_font_size', 'description_font_size', 'content_position', 'title', 'description', 'slider_image', 'text_color'];
+    protected $allowedFields    = ['title_font_family', 'desc_font_family', 'name', 'blur_on_description', 'video', 'media_type', 'image_blur','title_font_size', 'description_font_size', 'content_position', 'title', 'description', 'slider_image', 'text_color'];
 
     // Dates
     protected $useTimestamps = false;

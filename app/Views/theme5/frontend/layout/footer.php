@@ -30,14 +30,14 @@
     }
 
     .footer-section-title i {
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         font-size: 22px;
     }
 
     /* ===== CONTACT CARDS ===== */
     .contact-card {
         background: rgba(255, 255, 255, 0.08);
-        border-left: 3px solid var(--medical-teal, #008080);
+        border-left: 3px solid var(--theme_mode_color, #008080);
         border-radius: 8px;
         padding: 18px;
         margin-bottom: 18px;
@@ -55,7 +55,7 @@
         font-size: 14px;
         font-weight: 700;
         margin: 8px 0 10px 0;
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -77,7 +77,7 @@
         justify-content: center;
         margin-bottom: 10px;
         font-size: 18px;
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
     }
 
     .contact-link {
@@ -91,7 +91,7 @@
     }
 
     .contact-link:hover {
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         text-decoration: underline;
         transform: translateX(3px);
     }
@@ -130,14 +130,14 @@
     }
 
     .healthcare-links-modern a:hover {
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         background: rgba(0, 128, 128, 0.1);
         padding-left: 16px;
     }
 
     .healthcare-links-modern i {
         font-size: 12px;
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         transition: transform 0.3s ease;
     }
 
@@ -149,13 +149,13 @@
         background: rgba(255, 255, 255, 0.05);
         padding: 18px;
         border-radius: 8px;
-        border-left: 3px solid var(--medical-teal, #008080);
+        border-left: 3px solid var(--theme_mode_color, #008080);
     }
 
     .healthcare-info-links h5 {
         font-size: 13px;
         font-weight: 700;
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 15px;
@@ -273,7 +273,7 @@
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 8px;
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
     }
 
     .newsletter-description {
@@ -420,7 +420,7 @@
     }
 
     .legal-links a:hover {
-        color: var(--medical-teal, #008080);
+        color: var(--theme_mode_color, #008080);
         text-decoration: underline;
     }
 

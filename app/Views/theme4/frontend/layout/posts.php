@@ -565,7 +565,7 @@ if (!empty($posts)) {
                     <div class="featured-posts-grid">
                         <?php
                         $cardIndex = 0;
-                        foreach ($p as $post) {
+                        foreach ($p['posts'] as $post) {
                             $img = empty($post['image']) 
                                 ? base_url() . '/public/assets/img/services3-img.png' 
                                 : base_url() . '/public/uploads/post_updates_images/' . $post['image'];

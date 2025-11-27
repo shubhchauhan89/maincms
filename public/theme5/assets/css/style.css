@@ -95,14 +95,14 @@ body.theme-red {
   color: var(--bs-white);
 }
 
-.nav-link:hover,
+/* .nav-link:hover,
 .nav-link:active,
 .nav-link:focus {
   background: var(--bs-orange-100) !important;
   color: white !important;
   border-radius: 18px !important;
 
-}
+} */
 
 .search-btn {
   background: var(--bs-orange-100) !important;

@@ -161,7 +161,7 @@
                            <div class="col-md-4">
                             <div class="form-group ">
                                 <div class="mb-3">
-                                    <label class="form-label fs-15">Inquiry Button Color *</label>
+                                    <label class="form-label fs-15">Button Color *</label>
                                     <input type="color" class="form-control" name="inquiry_button_color" id="inquiry_button_color" value="<?php isset($info->inquiry_button_color);
                                                                                                                                 echo $info->inquiry_button_color;
                                                                                                                                 "#000000"; ?>">

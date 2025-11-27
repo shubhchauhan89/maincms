@@ -34,7 +34,7 @@ if (count($posts) > 0) {
                                     <div class="col-md-12 pb-3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                                         <div class="update">
                                             <?php
-foreach ($p as $post) {
+foreach ($p['posts'] as $post) {
                 $img = empty($post['image']) ? base_url() . '/public/assets/img/services3-img.png' : base_url() . '/public/uploads/post_updates_images/' . $post['image'];
                 ?>
                                                 <div class="col-md-12">

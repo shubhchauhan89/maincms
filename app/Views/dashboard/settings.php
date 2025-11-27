@@ -405,6 +405,8 @@
 										<option value="theme3" <?php if ($userInfo->theme_name == 'theme3') echo 'selected'; ?>>E Commerce</option>
 										<option value="theme4" <?php if ($userInfo->theme_name == 'theme4') echo 'selected'; ?>>Real State</option>
 										<option value="theme5" <?php if ($userInfo->theme_name == 'theme5') echo 'selected'; ?>>Doctor/Medical</option>
+										<option value="theme6" <?php if ($userInfo->theme_name == 'theme6') echo 'selected'; ?>>Industrial</option>
+										<option value="theme7" <?php if ($userInfo->theme_name == 'theme7') echo 'selected'; ?>>Educational</option>
 									</select>
 								</div>
 							</div>
@@ -412,18 +414,7 @@
 							<div class="form-group">
 								<div class="mb-3">
 									<label class="form-label font-weight-bold">Theme background color</label>
-									<select class="form-control" name="theme_color" id="theme_color">
-										<option value="default" <?php if ($userInfo->theme_color == 'default') echo 'selected'; ?>>Default</option>
-										<option value="blue" <?php if ($userInfo->theme_color == 'blue') echo 'selected'; ?>>Blue</option>
-										<option value="green" <?php if ($userInfo->theme_color == 'green') echo 'selected'; ?>>Green</option>
-										<option value="olive" <?php if ($userInfo->theme_color == 'olive') echo 'selected'; ?>>Olive</option>
-										<option value="orange" <?php if ($userInfo->theme_color == 'orange') echo 'selected'; ?>>Orange</option>
-										<option value="pink" <?php if ($userInfo->theme_color == 'pink') echo 'selected'; ?>>Pink</option>
-										<option value="purple" <?php if ($userInfo->theme_color == 'purple') echo 'selected'; ?>>Purple</option>
-										<option value="red" <?php if ($userInfo->theme_color == 'red') echo 'selected'; ?>>Red</option>
-										<option value="custom" <?php if ($userInfo->theme_color == 'custom') echo 'selected'; ?>>Custom</option>
-										
-									</select>
+									<input type="color" class="form-control" name="theme_color" id="header_background <?php echo $userInfo->theme_color;?>" value="<?php echo $userInfo->theme_color;?>" />
 								</div>
 							</div>
 
@@ -434,12 +425,14 @@
 								</div>
 							</div>
 
-							<!-- <div class="form-group">
+							<div class="form-group">
 								<div class="mb-3">
 									<label class="form-label font-weight-bold">Theme text color</label>
 									<input type="color" class="form-control" name="customTextColor"  value="<?php // echo $userInfo->custom_text_color;?>" />
 								</div>
-							</div> -->
+							</div>
+
+							<?php if($userInfo->theme_name != "theme6"): ?>
 
 							<div class="form-group">
 								<div class="mb-3">
@@ -450,6 +443,8 @@
 									</select>
 								</div>
 							</div>
+
+							<?php endif; ?>
 
 							<div class="text-right">
 								<button class="btn btn-primary">Save changes</button>

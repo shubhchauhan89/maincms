@@ -117,7 +117,7 @@ echo $custom_insert['head'] ?? '';
     }
 
     .medical-header-padding {
-        padding: 15px 0;
+        padding: 15px 10px;
     }
 
     /* Logo */
@@ -129,7 +129,7 @@ echo $custom_insert['head'] ?? '';
     }
 
     .medical-navbar-brand img {
-        max-height: 50px;
+        max-height: 65px;
         width: auto;
         transition: transform 0.3s ease;
     }

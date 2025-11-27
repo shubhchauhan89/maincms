@@ -1,4 +1,4 @@
-<?= $this->extend("theme4/frontend/layout/master") ?>
+<?= $this->extend("theme5/frontend/layout/master") ?>
 <?= $this->section("customCss") ?>
 <style>
     /* ===== REVOLUTIONARY MEDICAL PRODUCT DETAIL PAGE ===== */
@@ -563,7 +563,7 @@
 </style>
 <?= $this->endSection() ?>
 
-<?= $this->section("contenttheme4") ?>
+<?= $this->section("contenttheme5") ?>
 <?php
 
 function getYouTubeID($url) {
